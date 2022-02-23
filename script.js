@@ -9,7 +9,7 @@ function start() {
     $("#fundoGame").append("<div id='energia'></div>");
     
     var jogo = {}
-    var TECLA = { W: 38, S: 40, D: 68 }
+    var TECLA = { W: 87, S: 83, D: 68 }
     var velocidade = 5;
     var posicaoY = parseInt(Math.random() * 334);
     var podeAtirar = true;
@@ -229,7 +229,7 @@ function start() {
     function explosao1(inimigo1X,inimigo1Y) {
         somExplosao.play();
         $("#fundoGame").append("<div id='explosao1'></div");
-        $("#explosao1").css("background-image", url('/assets/imgs/explosao.png'));
+        $("#explosao1").css("background-image", "url(/assets/imgs/explosao.png)");
 
         var div = $("#explosao1");
         div.css("top", inimigo1Y);
@@ -263,7 +263,7 @@ function start() {
 	function explosao2(inimigo2X,inimigo2Y) {
         somExplosao.play();
         $("#fundoGame").append("<div id='explosao2'></div");
-        $("#explosao2").css("background-image", url('/assets/imgs/explosao.png'));
+        $("#explosao2").css("background-image", "url(/assets/imgs/explosao.png)");
 
         var div2 = $("#explosao2");
         div2.css("top", inimigo2Y);
@@ -317,19 +317,19 @@ function start() {
     // função que avalia a energia (vida) do jogador, helicóptero cinza
     function energia() {
         if (energiaAtual == 3) {
-            $("#energia").css("background-image", url('/assets/imgs/energia3.png'));
+            $("#energia").css("background-image", "url(/assets/imgs/energia3.png)");
         }
 
         if (energiaAtual == 2) {
-            $("#energia").css("background-image", url('/assets/imgs/energia2.png'));
+            $("#energia").css("background-image", "url(/assets/imgs/energia2.png)");
         }
 
         if (energiaAtual == 1) {
-            $("#energia").css("background-image", url('/assets/imgs//energia1.png'));
+            $("#energia").css("background-image", "url(/assets/imgs/energia1.png)");
         }
 
         if (energiaAtual == 0) {
-            $("#energia").css("background-image", url('/assets/imgs//imgs/energia0.png'));
+            $("#energia").css("background-image", "url(/assets/imgs/energia0.png)");
             gameOver(); // chamando a função game over
         }
     }
